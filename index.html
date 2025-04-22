@@ -1,0 +1,220 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Piyush L. Shrestha">
+    
+    <!-- IMPORTING CUSTOM STYLES. -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- ICON. -->
+    <link rel="icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIG4RZLQCCvYzUOzCLUpTWsSgLYhZJwhfxbw&s" />
+    <title>Bishesh| Profile</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="nav">
+        <!-- NAV CONTENTS -->
+        <section class="nav-contents">
+            <!-- NAV TITLE -->
+            <div class="nav-title" onclick="location.reload()">
+               Bishesh
+            </div>
+            <!-- NAV ITEMS -->
+            <div class="nav-items" id="nav-items">
+                <a href="#about">ABOUT</a>
+                <a href="#experience">EXPERIENCE</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#awards">AWARDS & CERTIFICATIONS</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+            <!-- HAMBURGER ICON -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+    </nav>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <!-- ABOUT CONTENTS -->
+        <section class="about-contents">
+            <!-- TEXTUAL DETAILS -->
+            <article class="about-description">
+                <h1>Bishesh</h1>
+                <h3>HTML | CSS | Java | JavaScript</h3>
+                <p>
+                    A passionate web developer focused on building user-friendly and creative web solutions.
+                <blockquote><strong>Skills:</strong> HTML, CSS, Java, JavaScript, Web Development, Teaching, Problem Solving.</blockquote>
+                </p>
+            </article>
+            <!-- IMAGE -->
+            <div class="about-image">
+                <img src="/portfolio/assets/1000674588.png" width="500px" height="600px">
+            </div>
+        </section>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <!-- EXPERIENCE CONTENTS -->
+        <section class="experience-contents">
+            <section id="contents-left">
+                <h2 class="contents-title">EXPERIENCE</h2>
+                <section class="experience-items">
+                    <!-- EXPEIRENCE #1 (SET IN DECENDING ORDER) -->
+                    <div id="exp-1" class="active" onclick="showExp('exp-1-content')">
+                        <h3>HTML Coding</h3>
+                        <p>Freelancer | 2024 - Ongoing</p>
+                    </div>
+                    <!-- EXPEIRENCE #2 -->
+                    <div id="exp-2" onclick="showExp('exp-2-content')">
+                        <h3>Teaching</h3>
+                        <p>Instructor | 2023 - Ongoing</p>
+                    </div>
+                </section>
+            </section>
+            <section id="exp-contents-right">
+                <!-- RESPECTIVE CONTENT OF EXPERIENCE #1 -->
+                <div id="exp-1-content">
+                    <h2>HTML Coding</h2>
+                    <i>Freelancer | 2024 - Ongoing</i>
+                    <hr />
+                    <p>
+                        Working on HTML coding projects, building responsive websites for various clients.
+                    </p>
+                </div>
+                <!-- RESPECTIVE CONTENT OF EXPERIENCE #2 -->
+                <div id="exp-2-content" style="display: none;">
+                    <h2>Teaching</h2>
+                    <i>Instructor | 2023 - Ongoing</i>
+                    <hr />
+                    <p>
+                        Teaching web development concepts including HTML, CSS, and JavaScript to aspiring developers.
+                    </p>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <!-- PROJECTS CONTENTS. -->
+        <section class="projects-contents">
+            <h2 class="contents-title">PROJECTS</h2>
+            <section class="project-items">
+                <!-- PROJECT #1: Personal Portfolio -->
+                <div id="project-1">
+                    <h2>Personal Portfolio</h2>
+                    <blockquote>HTML, CSS, JS | 2024</blockquote>
+                    <p>
+                        A personal portfolio website showcasing my web development projects and skills.
+                    </p>
+                    <p><a href="#">Link</a></p>
+                </div>
+                <!-- PROJECT #2: Task Manager -->
+                <div id="project-2">
+                    <h2>Task Manager</h2>
+                    <blockquote>HTML, CSS, JS | 2024</blockquote>
+                    <p>
+                        A simple task management app to create, update, and delete tasks.
+                    </p>
+                    <p><a href="#">Link</a></p>
+                </div>
+                <!-- PROJECT #3: Weather App -->
+                <div id="project-3">
+                    <h2>Weather App</h2>
+                    <blockquote>HTML, CSS, JS | 2024</blockquote>
+                    <p>
+                        A weather forecasting app that shows current weather data using an external API.
+                    </p>
+                    <p><a href="#">Link</a></p>
+                </div>
+                <!-- PROJECT #4: Blog Website -->
+                <div id="project-4">
+                    <h2>Blog Website</h2>
+                    <blockquote>HTML, CSS, JS | 2024</blockquote>
+                    <p>
+                        A simple blog website where users can post articles and share their thoughts.
+                    </p>
+                    <p><a href="#">Link</a></p>
+                </div>
+                <!-- PROJECT #5: Portfolio Website -->
+                <div id="project-5">
+                    <h2>Portfolio Website</h2>
+                    <blockquote>HTML, CSS, JS | 2024</blockquote>
+                    <p>
+                        Another version of my portfolio website with a different layout and design.
+                    </p>
+                    <p><a href="#">Link</a></p>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <!-- AWARDS & CERTIFICATIONS -->
+    <section id="awards">
+        <!-- AWARDS CONTENTS -->
+        <section class="awards-contents">
+            <section id="contents-left">
+                <h2 class="contents-title">AWARDS & CERTIFICATIONS</h2>
+                <section class="awards-items">
+                    <!-- AWARDS #1 -->
+                    <div id="awards-1" class="active" onclick="showAwards('awards-1-content')">
+                        <h3>Hackathon - Best Creative Idea in Smart College</h3>
+                        <p>HSMSS | 2024</p>
+                    </div>
+                </section>
+            </section>
+            <section id="awards-contents-right">
+                <!-- RESPECTIVE CONTENT OF AWARDS #1 -->
+                <div id="awards-1-content">
+                    <h2>Hackathon - Best Creative Idea in Smart College</h2>
+                    <i>HSMSS | 2024</i>
+                    <hr />
+                    <p>
+                        Won the first place in the Hackathon competition with a project for a smart college solution.
+                        <a href="#">Certificate</a>
+                    </p>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <!-- FOOTER/CONTACT -->
+    <footer id="contact">
+        <!-- FOOTER/CONTACT CONTENTS -->
+        <section class="contact-contents">
+            <!-- FOOTER/CONTACT LINKS -->
+            <div class="contact-links">
+                <h3>LINKS</h3>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#awards">Awards & Certifications</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <!-- FOOTER/CONTACT CONNECT -->
+            <div class="contact-connect">
+                <h3>CONNECT</h3>
+                <a href="#">Github</a>
+                <a href="#">LinkedIn</a>
+            </div>
+            <!-- FOOTER/CONTACT CONTACT -->
+            <div>
+                <h3>CONTACT</h3>
+                <a href="mailto:bishesh@gmail.com">Email Me</a>
+            </div>
+        </section>
+    </footer>
+
+    <!-- IMPORTING CUSTOM SCRIPT. -->
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

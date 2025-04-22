@@ -1,0 +1,618 @@
+/* IMPORTING GOOGLE FONT: INTER TIGHT. */
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* DEFINING VARIABLES. */
+:root {
+
+    /* TEXT SIZES. */
+    --h1: 50px;
+    --h2: 24px;
+    --h3: 20px;
+    --nm: 16px;
+
+    ---h1-mob: 28px;
+    ---h2-mob: 24px;
+    ---h3-mob: 20px;
+    --nm-mob: 14px;
+
+    /* COLORS. */
+    --primary: tomato;
+    --secondary: #49C5B6;
+    --white: #FEFEFE;
+    --white-2: #F0F0F0;
+    --black: #030303;
+    --black-2: #303030;
+    --gray: #606060;
+    --gray-2: #E0E0E0;
+
+    /* SPACING. */
+    --p-y: 60px;
+    --p-x: 120px;
+    --p-y-mob: 20px;
+    --p-x-mob: 40px;
+
+    /* TRANSITION TIME. */
+    --time: .5s;
+}
+
+/* DEFAULTS. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Inter Tight", sans-serif;
+    letter-spacing: 2px;
+}
+
+/* BODY SETUP. */
+html, body {
+    background-color: var(--primary);
+    color: var(--white);
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* NAVBAR: START. */
+
+/* NAV. */
+.nav {
+    height: 100px;
+    background-color: var(--primary);
+    color: var(--white);
+    position: fixed !important;
+    width: 100% !important;
+    top: 0 !important;
+    z-index: 999 !important;
+    padding: 0 var(--p-x);
+    text-transform: uppercase;
+    overflow: visible;
+}
+
+/* NAV CONTENTS. */
+.nav .nav-contents {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* NAV TITLE. */
+.nav .nav-contents .nav-title {
+    font-size: var(--h3);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* NAV ITEMS. */
+.nav .nav-contents .nav-items a {
+    font-size: 16px;
+    margin-left: 15px;
+    text-decoration: none;
+    color: var(--white);
+
+    &:hover {
+        font-weight: bold;
+        transition: var(--time);
+    }
+}
+
+/* HAMBURGER. */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    display: block;
+    border-radius: 3px;
+}
+
+/* NAVBAR: END. */
+
+/* ABOUT: START. */
+
+/* ABOUT. */
+#about {
+    height: auto;
+    background-color: var(--white);
+    color: var(--black);
+    padding: var(--p-y) var(--p-x);
+    margin-top: 100px;
+}
+
+/* ABOUT CONTENTS. */
+#about .about-contents {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* DESCRIPTION. */
+    & .about-description {
+        padding-right: calc(var(--p-x)/2);
+        width: 600px;
+        max-width: 600px;
+        min-width: 200px;
+
+        & h1 {
+            font-size: var(--h1);
+            margin-bottom: 30px;
+        }
+
+        & h3 {
+            font-size: var(--h3);
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+
+        & p,
+        blockquote {
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+
+        & blockquote {
+            color: var(--black-2);
+        }
+    }
+
+    /* IMAGE. */
+    & .about-image {
+        width: 100%;
+        max-width: 500px;
+        min-width: 100px;
+        /*  Will shrink on smaller screens */
+        aspect-ratio: 1 / 1;
+        /* Keeps it square, you can tweak */
+        background-image: url("../assets/images/Image.png");
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 20px 5px var(--black-2);
+            transition: var(--time);
+        }
+    }
+}
+
+/* ABOUT: END. */
+
+/* EXPERIENCE & AWARDS: START. */
+
+/* EXPERIENCE & AWARDS. */
+#experience,
+#awards {
+    background-color: var(--white-2);
+    color: var(--black-2);
+}
+
+.experience-contents,
+.awards-contents {
+    display: flex;
+    justify-content: space-between;
+
+    & #contents-left {
+        padding: calc(var(--p-y)*1.5) var(--p-x);
+    }
+
+    /* TITLE. */
+    & .contents-title {
+        font-size: var(--h2);
+        margin-bottom: 3rem;
+    }
+
+    /* LEFT ITEMS. */
+    #contents-left .experience-items,
+    #contents-left .awards-items {
+        display: flex;
+        flex-direction: column;
+        max-height: 200px;
+        width: 500px;
+        max-width: 500px;
+        overflow-y: scroll;
+
+        div {
+            padding: 20px 15px;
+            cursor: pointer;
+
+            &:nth-child(odd) {
+                background-color: var(--gray);
+                color: var(--white-2);
+            }
+
+            &:hover,
+            &.active {
+                background-color: var(--black);
+                color: var(--white);
+                transition: var(--time);
+            }
+        }
+
+        /* TITLE */
+        & h3 {
+            font-size: var(--h3);
+            margin-bottom: 5px;
+        }
+    }
+
+    /* RIGHT ITEMS. */
+    #exp-contents-right,
+    #awards-contents-right {
+        background-color: var(--black);
+        color: var(--gray-2);
+        padding: calc(var(--p-y)*1.5) var(--p-x);
+
+        /* TO SELECT ALL CHILD. */
+        & * {
+            margin-bottom: 20px;
+            line-height: 30px;
+        }
+
+        & hr {
+            margin-top: 10px;
+            border-color: var(--gray-2);
+        }
+
+        & a {
+            color: var(--white-2);
+        }
+    }
+}
+
+/* EXPERIENCE & AWARDS: END. */
+
+/* PROJECTS: START. */
+
+/* PROJECTS. */
+#projects {
+    background-color: var(--primary);
+    /* border: solid 5px var(--primary); */
+}
+
+/* PROJECT CONTENTS. */
+#projects .projects-contents {
+    display: flex;
+    align-items: center;
+
+    /* TITLE. */
+    & .contents-title {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+        background-color: var(--primary);
+        font-size: var(--h2);
+        padding: 1rem;
+    }
+
+    /* PROJECT ITEMS. */
+    & .project-items {
+        display: flex;
+        height: auto;
+        cursor: pointer;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+
+        /* Optional: snap to each item */
+        /* PROJECTS */
+        & div {
+            background-color: var(--white);
+            color: var(--black);
+            height: auto;
+            flex: 0 0 calc(100% / 3);
+            padding: var(--p-x) calc(var(--p-x)/2);
+            scroll-snap-align: start;
+            /* Optional: makes snapping clean */
+
+            &:nth-of-type(even) {
+                background-color: var(--primary);
+                color: var(--white);
+
+                & blockquote,
+                a {
+                    color: var(--gray-2);
+                }
+            }
+
+            /* HEADING. */
+            & h2 {
+                font-size: var(--h2);
+                text-transform: uppercase;
+                margin-bottom: 15px;
+            }
+
+            /* BLOCKQUOTE, PARAGRAPHS & LINKS. */
+            & blockquote,
+            p {
+                font-size: var(--nm);
+                margin-bottom: 10px;
+            }
+
+            & blockquote {
+                color: var(--gray);
+                text-transform: uppercase;
+            }
+
+            & p {
+                letter-spacing: 2px;
+                line-height: 30px;
+            }
+
+            & p a {
+                color: var(--gray);
+            }
+        }
+    }
+}
+
+/* PROJECTS: END. */
+
+/* FOOTER/CONTACT: START. */
+
+/* FOOTER/CONTACT. */
+#contact {
+    height: auto;
+    background-color: var(--black);
+    color: var(--white);
+    padding: var(--p-y) var(--p-x);
+    text-transform: capitalize;
+}
+
+/* FOOTER/CONTACT CONTENTS. */
+#contact .contact-contents {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: center;
+
+    /* ALL DIVS WITHIN (LINKS/CONNECT/CONTACT). */
+    & div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* H3 (LINKS/CONNECT/CONTACT). */
+    & div h3 {
+        padding-bottom: 15px;
+        font-size: var(--h3);
+    }
+
+    /* LINKS (LINKS/CONNECT/CONTACT). */
+    & div a {
+        color: var(--white);
+        text-decoration: none;
+        padding: 5px 0;
+        font-weight: 200;
+    }
+
+    & div a:hover {
+        font-weight: 400;
+        transition: var(--time);
+    }
+}
+
+/* FOOTER/CONTACT: END. */
+
+
+/* RESPONSIVE SEGMENT: TABLET, MOBILE. */
+@media (max-width: 1024px) {
+
+    body {
+        /* width: 100%; */
+        /* border: solid 5px yellow; */
+        background-color: var(--white);
+    }
+
+    /* NAVBAR: START. */
+
+    /* NAVBAR. */
+    .nav{
+        width: inherit;
+        padding: 0 var(--p-x-mob);
+    }
+
+    /* HAMBURGER. */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        /* SHOULD MATCH NAVBAR'S HEIGHT NAVBAR. */
+        right: 50px;
+        background-color: var(--primary);
+        padding: 2rem;
+        /* border-radius: 8px; */
+        z-index: 999;
+        /* TO ENSURE THAT IT IS ALWAYS ON TOP. */
+        gap: 1rem;
+        opacity: .9;
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+    /* NAVBAR: END. */
+
+
+    /* ABOUT: START. */
+
+    /* ABOUT CONTENTS. */
+
+    #about {
+        margin: 0;
+        padding: 0;
+        margin-top: 100px;
+    }
+
+    #about .about-contents {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+    .about-description{
+        /* padding: var(--p-y-mob) var(--p-x-mob); */
+        /* background-color: red; */
+        /* width: fit-content; */
+        
+        margin: 0;
+        padding: var(--p-y-mob) var(--p-x-mob);
+        width: 100% !important;
+        text-align: center;
+
+        & h1{
+            font-size: var(---h1-mob) !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        & h3{
+            font-size: var(---h3-mob) !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        & p, blockquote{
+            font-size: var(--nm-mob) !important;
+            margin: 0;
+        }
+
+    }
+
+    .about-image{
+        border-radius: 0 !important;
+    }
+
+    /* ABOUT: END. */
+
+    /* EXPERIENCE & AWARDS: START. */
+
+    /* EXPERIENCE & AWARDS. */
+    #experience,
+    #awards {
+        background-color: var(--white-2);
+        color: var(--black-2);
+    }
+
+    /* CONTENTS. */
+    .experience-contents,
+    .awards-contents {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* LEFT ITEMS. */
+
+    .experience-contents #contents-left, .awards-contents #contents-left{
+        padding: 1.5rem;
+        & .contents-title{
+            margin-top: 30px;
+        }
+    }
+    .experience-contents #contents-left .experience-items,
+    .awards-contents #contents-left .awards-items {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 3fr;
+        width: 100% !important;
+        padding: 0 !important;
+        
+        min-height: 60px;
+        height: 100%;
+        max-height: 120px;
+    }
+
+    #contents-left .experience-items div,
+    #contents-left .awards-items div{
+        min-width: 250px !important;
+        width: 500px !important;
+        & p{
+            display: none;
+        }
+    }
+
+    /* RIGHT ITEMS. */
+    #exp-contents-right,
+    #awards-contents-right {
+        /* flex: 0 0 3fr; */
+        height: auto;
+        padding: 0;
+        margin: 0;
+        min-height: 300px;
+        height: 100%;
+        max-height: 600px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        & div{
+            padding: 25px 0;
+            margin: -5em;
+        }
+
+        & h2 {
+            margin-top: 30px;
+        }
+    }
+
+    /* EXPERIENCE & AWARDS: END. */
+
+
+    /* PROJECTS: START. */
+
+    /* PROJECT CONTENTS. */
+
+    #projects .projects-contents, #projects .projects-contents .project-items{
+        min-height: 400px;
+        height: 100%;
+        max-height: 600px;
+    }
+
+
+    #projects .projects-contents .project-items div {
+        /* 
+        BETTER FOR TABLET:
+        flex: 0 0 calc(100%/2); 
+        */
+        flex: 0 0 100%;
+        /* padding: 0; */
+        margin: 0;
+        min-height: 400px;
+        max-height: 600px;
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    /* PROJECTS: END. */
+
+
+    /* FOOTER: START. */
+    /* FOOTER/CONTACT CONTENTS. */
+    #contact{
+        padding: var(--p-y) var(--p-x-mob);
+        background-color: var(--primary);
+    }
+
+    #contact .contact-contents {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    /* FOOTER: END. */
+
+}
